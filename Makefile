@@ -6,20 +6,13 @@
 
 include $(TOPDIR)/rules.mk
 
-PKG_VERSION:=0.1
-PKG_RELEASE:=1
+PKG_VERSION:=0.1-3
 LUCI_TITLE:=CPU utilization info for the LuCI status page
 LUCI_DEPENDS:=+luci-mod-admin-full
 LUCI_PKGARCH:=all
 PKG_LICENSE:=MIT
 
+#include ../../luci.mk
 include $(TOPDIR)/feeds/luci/luci.mk
-
-define Package/luci-app-cpu-status-mini/postinst
-#!/bin/sh
-rm -rf /tmp/luci-indexcache
-rm -rf /tmp/luci-modulecache/
-exit 0
-endef
 
 # call BuildPackage - OpenWrt buildroot signature

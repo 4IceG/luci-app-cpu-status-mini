@@ -1,0 +1,11 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+msgid "CPU Load"
+msgstr "Obciążenie procesora"
+
+msgid "CPU"
+msgstr "CPU"
+
+msgid "Total Load"
+msgstr "Całkowite obciążenie"
