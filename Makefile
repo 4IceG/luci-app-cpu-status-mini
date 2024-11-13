@@ -1,18 +1,19 @@
 #
-# Copyright (C) 2021 gSpot (https://github.com/gSpotx2f/luci-app-cpu-status-mini)
+# Copyright 2023-2024 Rafał Wabik - IceG - From eko.one.pl forum
 #
-# This is free software, licensed under the MIT License.
+# Licensed to the GNU General Public License v3.0.
 #
 
 include $(TOPDIR)/rules.mk
 
-PKG_VERSION:=0.1-3
-LUCI_TITLE:=CPU utilization info for the LuCI status page
-LUCI_DEPENDS:=+luci-mod-admin-full
+LUCI_TITLE:=Drive info for the LuCI status page
+PKG_MAINTAINER:=Rafał Wabik <4Rafal@gmail.com>
+LUCI_DEPENDS:=+luci-mod-admin-full +lsblk
 LUCI_PKGARCH:=all
-PKG_LICENSE:=MIT
+PKG_LICENSE:=GNU General Public License v3.0
+PKG_VERSION:=0.5
+PKG_RELEASE:=20241111
 
-#include ../../luci.mk
 include $(TOPDIR)/feeds/luci/luci.mk
 
 # call BuildPackage - OpenWrt buildroot signature

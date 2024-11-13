@@ -1,0 +1,11 @@
+{
+	"luci-app-drive-status-mini": {
+		"description": "Grant access to drive-status procedures",
+		"read": {
+			"file": {
+				"/bin/df": [ "exec" ],
+				"/usr/bin/lsblk": [ "exec" ]
+			}
+		}
+	}
+}
